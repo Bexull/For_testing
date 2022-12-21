@@ -127,9 +127,22 @@ async def callbackall(callback: types.CallbackQuery):
 		await callback.message.answer(text="Выберите в какие дни:",reply_markup=ink_medeu2)
 	if callback.data == "working_days":
 		await callback.answer("❤️")
-		await callback.message.answer(text="Взрослый билет(23+) - 2000тг\n"
-											   "Молодежный билет(14-22) - 1200тг\n"
-											   "Детский билет(7-13) - 500тг")
+		await callback.message.answer(text="Выберите сеасн:", reply_markup=ink_session_workingDays)
+	if callback.data == "session1_workingDays":
+		await callback.answer("🤍")
+		await callback.message.answer(text="Soon...")
+	if callback.data == "session2_workingDays":
+		await callback.answer("💛")
+		await callback.message.answer(text="10:00 - 12:30:\n"
+										   "Взрослый билет(23+) - 2000тг\n"
+											"Молодежный билет(14-22) - 1200тг\n"
+											"Детский билет(7-13) - 500тг",parse_mode="HTML")
+	if callback.data == "session3_workingDays":
+		await callback.answer("🤍")
+		await callback.message.answer(text="13:30 - 16:30:\n"
+										   "Взрослый билет(23+) - 2500тг\n"
+											"Молодежный билет(14-22) - 1500тг\n"
+ 											"Детский билет(7-13) - 500тг")
 	if callback.data == "days off":
 		await callback.answer("🖤")
 		await callback.message.answer(text="Soon...")

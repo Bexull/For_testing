@@ -50,6 +50,7 @@ ink_session_workingDays = InlineKeyboardMarkup(row_width=2)
 sb1 = InlineKeyboardButton(text="10:00 - 12:30",callback_data="session1_workingDays")
 sb2 = InlineKeyboardButton(text="13:30 - 16:30",callback_data="session2_workingDays")
 sb3 = InlineKeyboardButton(text="19:00 - 23:00",callback_data="session3_workingDays")
+ink_session_workingDays.add(sb1,sb2).add(sb3)
 
 
 kb = ReplyKeyboardMarkup(resize_keyboard=True)
